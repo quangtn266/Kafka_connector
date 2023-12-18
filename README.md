@@ -18,7 +18,7 @@ Steps:
 
 ### Building packages:
 1) mvn clean package
-2) mvn assembly:single  # check pom.xml for assembly & jar package
+2) mvn assembly:single  (optional) # check pom.xml for assembly & jar package
 
 ### Configuration.
 1) Export classpath: Export CLASSPATH="$(find target -type f -name '*.jar'| grep '\-package' | tr '\n'':')"
@@ -30,8 +30,9 @@ Steps:
 docker run -it --rm -p 2181:2181 -p 3030:3030 -p 8081:8081 -p 8082:8082 -p 8083:8083 -p 9092:9092 -e ADV_HOST=127.0.0.1 -e RUNTEST=0 -v ~/
 <Absolute_dir>/target/kafka-connect-source-github-1.1-package/share/java/kafka-connect-source-github:/connectors <Kafka_docker>
 
-Absolute_dir: Desktop/01_work/01_job/Source/kafka/kafka_connector/kafka_connector_prjcustom
-Kafka_docker: lensesio/fast-data-dev (https://github.com/lensesio/fast-data-dev)
+<Absolute_dir>: Desktop/01_work/01_job/Source/kafka/kafka_connector/kafka_connector_prjcustom
+
+<Kafka_docker>: lensesio/fast-data-dev (https://github.com/lensesio/fast-data-dev)
 
 ## Note:
 I also added targert folder for easy deploy.
