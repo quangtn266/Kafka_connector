@@ -1,5 +1,7 @@
+Welcome to your new Kafka Connect connector!
+
 # Kafka_connector
-Generate a connector (Source &amp; Sink- Kafka Connector)
+Generate a connector (Source Kafka Connector)
 
 ## Setup:
 1) JDK version 1.8
@@ -20,3 +22,6 @@ Generate a connector (Source &amp; Sink- Kafka Connector)
 2) Build the Dockerfile: docker built . -t quangtn/kafka-connect-source-github:1.0
 3) Run the docker: docker run -e CLASSPATH=$CLASSPATH --net=host --rm -t -v $(pwd)/offsets:/kafka-connect-source-github/offsets quangtn/kafka-connect-source-github:1.0
 
+
+## Note:
+For sink connector (custom), I wil update it in another project. Besides, sink connector can be used with Elasticsearch or Database.
