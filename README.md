@@ -25,3 +25,21 @@ Generate a connector (Source Kafka Connector)
 
 ## Note:
 For sink connector (custom), I wil update it in another project. Besides, sink connector can be used with Elasticsearch or Database.
+
+
+## Architecture
+
+Kafka Connector architecture
+
+![kafka_connector_architecture](https://github.com/quangtn266/Kafka_connector/assets/50879191/a2ab7d2c-2045-48df-b116-c8bdb459138d)
+
+Kafka Connect Cluster Distributed Architecture
+
+![distributed_architecture](https://github.com/quangtn266/Kafka_connector/assets/50879191/3d12f32f-ae89-4050-918e-05fc0e833c1f)
+
+Data Pipeline
+
+![data_pipeline_AWS](https://github.com/quangtn266/Kafka_connector/assets/50879191/d305c8ce-9055-4d3a-9652-8f811db2b1cc)
+
+
+
