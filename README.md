@@ -14,14 +14,27 @@ Generate a connector (Source Kafka Connector)
 ## How to run
 
 ### Building packages:
-1) mvn clean package
-2) mvn assembly:single  # check pom.xml for assembly & jar package
-
+1)
+```
+  mvn clean package
+```
+2)
+```
+  mvn assembly:single  # check pom.xml for assembly & jar package
+```
 ### Configuration.
-1) Export classpath: Export CLASSPATH="$(find target -type f -name '*.jar'| grep '\-package' | tr '\n'':')"
-2) Build the Dockerfile: docker built . -t quangtn/kafka-connect-source-github:1.0
-3) Run the docker: docker run -e CLASSPATH=$CLASSPATH --net=host --rm -t -v $(pwd)/offsets:/kafka-connect-source-github/offsets quangtn/kafka-connect-source-github:1.0
-
+1) Export classpath:
+```
+   Export CLASSPATH="$(find target -type f -name '*.jar'| grep '\-package' | tr '\n'':')"
+```
+2) Build the Dockerfile:
+```
+   docker built . -t quangtn/kafka-connect-source-github:1.0
+```
+3) Run the docker:
+```
+docker run -e CLASSPATH=$CLASSPATH --net=host --rm -t -v $(pwd)/offsets:/kafka-connect-source-github/offsets quangtn/kafka-connect-source-github:1.0
+```
 
 ## Note:
 For sink connector (custom), I wil update it in another project. Besides, sink connector can be used with Elasticsearch or Database.
